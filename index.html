@@ -309,7 +309,7 @@
 		</div>
 	</div>
 
-	<script src="data18.js"></script>
+	<script src="data5.js"></script>
 	<script>
 		const quiz = window.QUIZ;
 		const siteTitle = document.getElementById('siteTitle');
@@ -404,7 +404,10 @@
 				targetPhoto.alt = 'photosフォルダに画像を���いてください';
 			};
 
-			hintText.textContent = `地図のヒント：同じ色のピンを見て探してみよう。`;
+			const hintParts = [];
+			hintParts.push('地図のヒント：同じ色のピンを見て探してみよう。');
+			if(stage.nameHint) hintParts.push(stage.nameHint);
+			hintText.textContent = hintParts.join('　');
 
 			// 問題文（ステージごとに変える）
 			questionText.textContent = stage.question || 'これはどれ？';
