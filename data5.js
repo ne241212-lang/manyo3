@@ -1,13 +1,15 @@
 // data5.js
 // 5 questions total (5 plants × 1 question)
+// Required photos under /photos:
+//  - fuji.jpg, himejoon.jpg, sugi.jpg, marigold.jpg, nanakamado.jpg
 
 window.QUIZ = {
-  title: "万葉植物園 植物クイズ",
+  title: "万葉植物園 植物クイズ（5問）",
   mapImage: "assets/map.png",
   intro: {
     title: "万葉植物園の植物さがし",
     lead:
-      "写真を手がかりに、園内で同じ植物を探してみましょう。\n\n地図はあくまで“だいたいこのへん”というヒントです。\n\n全5問。",
+      "写真を手がかりに、園内で同じ植物を探してみましょう。\n\n地図はあくまで“だいたいこのへん”というヒントです。\n\n全5問。正解すると雰囲気の歌が表示されます。",
     note: "ボタンを押すとクイズへ進みます",
   },
 
@@ -37,6 +39,30 @@ window.QUIZ = {
     },
 
     {
+      id: "himejoon",
+      name: "ヒメジョオン",
+      photo: "photos/himejoon.jpg",
+      pin: { x: 50, y: 60 },
+      pinColor: "#F59E0B",
+      stages: [
+        {
+          type: "plant_name",
+          question: "【Q2】写真の植物はどれ？",
+          choices: ["ヒメジョオン", "タンポポ", "ハルジオン"],
+          answer: "ヒメジョオン",
+          nameHint: "ヒント：カタカナ6文字。白い花びらがたくさん。道ばたに多い。",
+          correctTitle: "正解！",
+          correctText: "雰囲気の歌が出ます。",
+          poem: {
+            title: "ヒメジョオン（雰囲気）",
+            text: "白き花　風にほどけて　道しるべ",
+            modern: "白い花びらが風でほどけるみたいに見えて、道ばたで目印になる感じ。",
+          },
+        },
+      ],
+    },
+
+    {
       id: "sugi",
       name: "杉",
       photo: "photos/sugi.jpg",
@@ -45,7 +71,7 @@ window.QUIZ = {
       stages: [
         {
           type: "plant_name",
-          question: "【Q2】写真の植物はどれ？",
+          question: "【Q3】写真の植物はどれ？",
           choices: ["杉", "ヒノキ", "マツ"],
           answer: "杉",
           nameHint: "ヒント：漢字1文字。まっすぐ高く伸びる木。",
@@ -61,72 +87,48 @@ window.QUIZ = {
     },
 
     {
-      id: "himejoon",
-      name: "ヒメジョオン",
-      photo: "photos/shaku.jpg",
-      pin: { x: 50, y: 60 },
-      pinColor: "#F59E0B",
+      id: "marigold",
+      name: "マリーゴールド",
+      photo: "photos/marigold.jpg",
+      pin: { x: 15, y: 25 },
+      pinColor: "#EAB308",
       stages: [
         {
           type: "plant_name",
-          question: "【Q3】写真の植物はどれ？",
-          choices: ["ヒメジョオン", "タンポポ", "ハルジオン"],
-          answer: "ヒメジョオン",
-          nameHint: "ヒント：カタカナ6文字。白い花びらがたくさん。道ばたに多い。",
+          question: "【Q4】写真の植物はどれ？",
+          choices: ["マリーゴールド", "ヒマワリ", "キンセンカ"],
+          answer: "マリーゴールド",
+          nameHint: "ヒント：カタカナ8文字。オレンジ〜黄色の花が丸く咲く。",
           correctTitle: "正解！",
           correctText: "雰囲気の歌が出ます。",
           poem: {
-            title: "ヒメジョオン（雰囲気）",
-            text: "白き点　道の端に咲き　風を待つ",
-            modern: "小さな白い花が集まって、道の端で静かに揺れている感じ。",
+            title: "マリーゴールド（雰囲気）",
+            text: "昼の陽に　まるくほどける　金の花",
+            modern: "日なたで、オレンジ色の花がまるく明るく見える感じ。",
           },
         },
       ],
     },
 
     {
-      id: "hagi",
-      name: "萩",
-      photo: "photos/hagi.jpg",
+      id: "nanakamado",
+      name: "ナナカマド",
+      photo: "photos/nanakamado.jpg",
       pin: { x: 40, y: 30 },
       pinColor: "#EC4899",
       stages: [
         {
           type: "plant_name",
-          question: "【Q4】写真の植物はどれ？",
-          choices: ["萩", "ススキ", "ツツジ"],
-          answer: "萩",
-          nameHint: "ヒント：漢字1文字。秋の七草で有名。",
-          correctTitle: "正解！",
-          correctText: "雰囲気の歌が出ます。",
-          poem: {
-            title: "萩（雰囲気）",
-            text: "秋の風　萩の影だけ　先に揺れ",
-            modern: "風が来ると、まず萩の影がゆれて見える感じ。",
-          },
-        },
-      ],
-    },
-
-    {
-      id: "susuki",
-      name: "ススキ",
-      photo: "photos/susuki.jpg",
-      pin: { x: 70, y: 50 },
-      pinColor: "#64748B",
-      stages: [
-        {
-          type: "plant_name",
           question: "【Q5】写真の植物はどれ？",
-          choices: ["ススキ", "ハス", "フジ"],
-          answer: "ススキ",
-          nameHint: "ヒント：カタカナ3文字。秋にふわっとした穂が出る草。",
+          choices: ["ナナカマド", "モミジ", "サクラ"],
+          answer: "ナナカマド",
+          nameHint: "ヒント：カタカナ5文字。赤い実が房になって残る木。",
           correctTitle: "正解！",
           correctText: "雰囲気の歌が出ます。",
           poem: {
-            title: "ススキ（雰囲気）",
-            text: "月の下　穂がほどけゆく　野のしずけさ",
-            modern: "月明かりで、ススキの穂がふわっとほどけて見える感じ。",
+            title: "ナナカマド（雰囲気）",
+            text: "秋の実の　赤を残して　風の道",
+            modern: "秋の終わりでも赤い実が残って、風が通る道の目印になる感じ。",
           },
         },
       ],
