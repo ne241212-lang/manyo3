@@ -90,7 +90,7 @@ window.QUIZ = {
       id: "marigold",
       name: "マリーゴールド",
       photo: "photos/marigold.jpg",
-      pin: { x: 15, y: 25 },
+      pin: { x: 15, y: 40 },
       pinColor: "#EAB308",
       stages: [
         {
@@ -114,7 +114,7 @@ window.QUIZ = {
       id: "nanakamado",
       name: "ナナカマド",
       photo: "photos/nanakamado.jpg",
-      pin: { x: 40, y: 30 },
+      pin: { x: 40, y: 60 },
       pinColor: "#EC4899",
       stages: [
         {
